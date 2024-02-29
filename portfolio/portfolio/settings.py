@@ -164,7 +164,7 @@ EMAIL_USE_TLS = True
 # LOGIN REDIRECT URL 
 LOGIN_REDIRECT_URL = 'home'
 
-ALLOWED_HOSTS = [ 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1','ali65rahman.pythonanywhere.com']
 
 
 AUTHENTICATION_BACKENDS = (
