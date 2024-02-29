@@ -1,0 +1,55 @@
+{% load static %}
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Chary &middot; Wary</title>
+<meta http-equiv="content-language" content="en-us" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="author" content="Sadhana Ganapathiraju" />
+<meta name="description" content="Chary . Wary is a simply stunning template for a blog." />
+<meta name="keywords" content="chary,wary,xhtml,css,free templates,templates,simplygold,sadhana,sadhana ganapathiraju" />
+<link rel="start" title="SimplyGold" href="#" />
+
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/master.css' %}">
+<link rel="stylesheet" href="{% static 'css/ie-win.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% endblock %}
+
+{% block header %}
+<div id="header">
+</div>
+<div id="navigation">
+  <ul>
+
+    {% if request.user.is_authenticated %}
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'contact' %}">contact</a></li>
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+    <li><a href="{% url 'profile' %}">Your Profile</a></li>
+    <li class="active"><a href="">Hello! {{ request.user.email }}</a></li>
+    {% else %}
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'signin' %}">Sign in</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+    {% endif %}
+  </ul>
+</div><br>
+{% endblock %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block home %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
